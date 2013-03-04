@@ -1,7 +1,7 @@
 var Montage = require("montage").Montage,
 TestPageLoader = require("montage-testing/testpageloader").TestPageLoader;
 
-var testPage = TestPageLoader.queueTest("native-control-test", function(testPage) {
+TestPageLoader.queueTest("native-control-test", function(testPage) {
     var test;
     beforeEach(function() {
         test = testPage.test;
