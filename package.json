@@ -2,10 +2,15 @@
     "name": "montage-native",
     "version": "0.1.0",
     "dependencies": {
-        "montage": "*",
-        "montage-testing": "~0.1.1"
+        "montage": "~0.13.0"
     },
     "devDependencies": {
-        "testacular": "~0.5.7"
-    }
+        "montage-testing": "~0.1.1"
+    },
+    "exclude": [
+        "overview.html",
+        "overview",
+        "run-tests.html",
+        "test"
+    ]
 }
