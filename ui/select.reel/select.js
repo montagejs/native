@@ -7,12 +7,12 @@
 */
 
 var Montage = require("montage").Montage,
-    Bindings = require("core/bindings").Bindings,
-    RangeController = require("core/range-controller").RangeController,
-    Component = require("ui/component").Component,
+    Bindings = require("montage/core/bindings").Bindings,
+    RangeController = require("montage/core/range-controller").RangeController,
+    Component = require("montage/ui/component").Component,
     NativeControl = require("ui/native-control").NativeControl,
-    PressComposer = require("ui/composer/press-composer").PressComposer,
-    Map = require("collections/map");
+    PressComposer = require("montage/ui/composer/press-composer").PressComposer,
+    Map = require("montage/collections/map");
 
 /**
     Wraps the a &lt;select&gt; element with binding support for the element's

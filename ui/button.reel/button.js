@@ -8,10 +8,10 @@
     @requires montage/ui/composer/press-composer
 */
 var Montage = require("montage").Montage,
-    Component = require("ui/component").Component,
+    Component = require("montage/ui/component").Component,
     NativeControl = require("ui/native-control").NativeControl,
-    PressComposer = require("ui/composer/press-composer").PressComposer,
-    Dict = require("collections/dict");
+    PressComposer = require("montage/ui/composer/press-composer").PressComposer,
+    Dict = require("montage/collections/dict");
 
 // TODO migrate away from using undefinedGet and undefinedSet
 

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Native InputRange test</title>
+    <script type="text/javascript" src="../../node_modules/montage/montage.js" data-package="../../"></script>
+    <script type="text/montage-serialization">
+        {
+            "test": {
+                "prototype": "test/native-input-range/native-input-range-test",
+                "properties": {
+                    "nativeInputRange1": {"@": "nativeInputRange1"},
+                    "nativeInputRange": {"@": "nativeInputRange"},
+                    "scroll": {"@": "scroll"},
+                    "scroll_range": {"@": "scroll_range"}
+                }
+            },
+
+            "nativeInputRange1": {
+                "prototype": "ui/input-range.reel",
+                "properties": {
+                    "element": {"#": "nativeInputRange1"},
+                    "value": "50"
+                }
+            },
+            "nativeInputRange": {
+                "prototype": "ui/input-range.reel",
+                "properties": {
+                    "element": {"#": "nativeInputRange"},
+                    "value": 1
+                }
+            },
+            "output": {
+                "prototype": "montage/ui/dynamic-text.reel",
+                "properties": {
+                    "element": {"#": "output"},
+                    "value": "hello"
+                },
+                "bindings": {
+                    "value": {"<-": "@nativeInputRange1.value"}
+                }
+            },
+
+            "scroll": {
+                "prototype": "montage/ui/scroller.reel",
+                "properties": {
+                    "element": {"#": "scroll"}
+                }
+            },
+            "scroll_range": {
+                "prototype": "ui/input-range.reel",
+                "properties": {
+                    "element": {"#": "scroll_range"}
+                }
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <h1>RangeInput test</h1>
+
+    <p>
+        <input type="range" data-montage-id="nativeInputRange1" value="0" min="0" max="100"/>
+        <span data-montage-id="output">0</span>
+    </p>
+
+    <p>
+        <input type="range" data-montage-id="nativeInputRange" min="-1" max="1" />
+    </p>
+
+    <h2>Scroll</h2>
+    <form action="" method="get">
+    <div data-montage-id="scroll" style="background:#CCC; height: 300px">
+        <div style="background:#A00; height:50px; width:10px">.</div>
+        <input type="range" data-montage-id="scroll_range" value="0" />
+        <div style="background:#A00; height:400px; width:10px">.</div>
+    </div>
+    </form>
+
+</body>
+</html>

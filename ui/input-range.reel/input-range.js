@@ -8,9 +8,9 @@
 */
 
 var Montage = require("montage").Montage,
-    Component = require("ui/component").Component,
+    Component = require("montage/ui/component").Component,
     TextInput = require("ui/text-input").TextInput,
-    PressComposer = require("ui/composer/press-composer").PressComposer;
+    PressComposer = require("montage/ui/composer/press-composer").PressComposer;
 
 /**
  * Wraps the a &lt;input type="range"> element with binding support for the element's standard attributes.

@@ -4,7 +4,7 @@
     @requires montage/ui/check-input
 */
 var Montage = require("montage").Montage,
-    Component = require("ui/component").Component,
+    Component = require("montage/ui/component").Component,
     CheckInput = require("ui/check-input").CheckInput;
 /**
  * Wraps the a &lt;input type="radio"> element with binding support for the element's standard attributes.

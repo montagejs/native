@@ -4,7 +4,7 @@
     @requires montage/ui/native-control
 */
 var Montage = require("montage").Montage,
-    Component = require("ui/component").Component,
+    Component = require("montage/ui/component").Component,
     NativeControl = require("ui/native-control").NativeControl;
 /**
   The Anchor component wraps a native <code>&lt;a&gt;</code> element and exposes its standard attributes as bindable properties.

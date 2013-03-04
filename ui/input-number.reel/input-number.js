@@ -5,7 +5,7 @@
 */
 
 var Montage = require("montage").Montage,
-    Component = require("ui/component").Component,
+    Component = require("montage/ui/component").Component,
     TextInput = require("ui/text-input").TextInput;
 
 /**
