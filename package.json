@@ -1,5 +1,5 @@
 {
-    "name": "montage-native",
+    "name": "native",
     "version": "0.1.0",
     "dependencies": {
         "montage": "~0.13.0"
