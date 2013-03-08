@@ -5,12 +5,12 @@
     @requires montage/core/core
     @requires montage/ui/component
     @requires montage/ui/native-control
-    @requires montage/ui/composer/press-composer
+    @requires montage/composer/press-composer
 */
 var Montage = require("montage").Montage,
     Component = require("montage/ui/component").Component,
     NativeControl = require("ui/native-control").NativeControl,
-    PressComposer = require("montage/ui/composer/press-composer").PressComposer,
+    PressComposer = require("montage/composer/press-composer").PressComposer,
     Dict = require("montage/collections/dict");
 
 // TODO migrate away from using undefinedGet and undefinedSet

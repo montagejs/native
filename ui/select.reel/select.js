@@ -3,7 +3,7 @@
     @requires montage/ui/component
     @requires montage/ui/controller/array-controller
     @requires montage/ui/native-control
-    @requires montage/ui/composer/press-composer
+    @requires montage/composer/press-composer
 */
 
 var Montage = require("montage").Montage,
@@ -11,7 +11,7 @@ var Montage = require("montage").Montage,
     RangeController = require("montage/core/range-controller").RangeController,
     Component = require("montage/ui/component").Component,
     NativeControl = require("ui/native-control").NativeControl,
-    PressComposer = require("montage/ui/composer/press-composer").PressComposer,
+    PressComposer = require("montage/composer/press-composer").PressComposer,
     Map = require("montage/collections/map");
 
 /**

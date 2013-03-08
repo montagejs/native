@@ -4,12 +4,12 @@
     @module montage/ui/check-input
     @requires montage/ui/component
     @requires montage/ui/native-control
-    @requires montage/ui/composer/press-composer
+    @requires montage/composer/press-composer
 */
 var Montage = require("montage").Montage,
     Component = require("montage/ui/component").Component,
     NativeControl = require("ui/native-control").NativeControl,
-    PressComposer = require("montage/ui/composer/press-composer").PressComposer;
+    PressComposer = require("montage/composer/press-composer").PressComposer;
 
 /**
     The base class for the Checkbox component. You will not typically create this class directly but instead use the Checkbox component.

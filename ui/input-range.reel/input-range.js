@@ -4,13 +4,13 @@
     @module "montage/ui/native/input-range.reel"
     @requires montage/ui/component
     @requires montage/ui/text-input
-    @requires montage/ui/composer/press-composer
+    @requires montage/composer/press-composer
 */
 
 var Montage = require("montage").Montage,
     Component = require("montage/ui/component").Component,
     TextInput = require("ui/text-input").TextInput,
-    PressComposer = require("montage/ui/composer/press-composer").PressComposer;
+    PressComposer = require("montage/composer/press-composer").PressComposer;
 
 /**
  * Wraps the a &lt;input type="range"> element with binding support for the element's standard attributes.
