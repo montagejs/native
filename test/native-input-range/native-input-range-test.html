@@ -10,9 +10,7 @@
                 "prototype": "test/native-input-range/native-input-range-test",
                 "properties": {
                     "nativeInputRange1": {"@": "nativeInputRange1"},
-                    "nativeInputRange": {"@": "nativeInputRange"},
-                    "scroll": {"@": "scroll"},
-                    "scroll_range": {"@": "scroll_range"}
+                    "nativeInputRange": {"@": "nativeInputRange"}
                 }
             },
 
@@ -28,29 +26,6 @@
                 "properties": {
                     "element": {"#": "nativeInputRange"},
                     "value": 1
-                }
-            },
-            "output": {
-                "prototype": "montage/ui/dynamic-text.reel",
-                "properties": {
-                    "element": {"#": "output"},
-                    "value": "hello"
-                },
-                "bindings": {
-                    "value": {"<-": "@nativeInputRange1.value"}
-                }
-            },
-
-            "scroll": {
-                "prototype": "montage/ui/scroller.reel",
-                "properties": {
-                    "element": {"#": "scroll"}
-                }
-            },
-            "scroll_range": {
-                "prototype": "ui/input-range.reel",
-                "properties": {
-                    "element": {"#": "scroll_range"}
                 }
             }
         }
