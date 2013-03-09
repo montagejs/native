@@ -274,11 +274,11 @@ var Select = exports.Select =  Montage.create(NativeControl, /** @lends module:"
             // @todo: if contentController is provided, should we just ignore the <option>
             // from the markup ?
 
-            // create a new Arraycontroller if one is not provided
+            // create a new RangeController if one is not provided
             // add options to contentController
             // look for selected options in the markup and mark these as selected
             if(!this.contentController) {
-                var contentController = ContentController.create();
+                var contentController = RangeController.create();
                 var selection = [];
                 var content = [];
 
