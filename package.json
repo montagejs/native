@@ -1,11 +1,14 @@
 {
     "name": "native",
-    "version": "0.1.0",
+    "version": "0.1.1-alpha",
+    "publishConfig": {
+      "tag": "edge"
+    },
     "dependencies": {
-        "montage": "~0.13.0"
+        "montage": "0.13.0-alpha"
     },
     "devDependencies": {
-        "montage-testing": "~0.1.1"
+        "montage-testing": "0.2.0-alpha"
     },
     "exclude": [
         "overview.html",
