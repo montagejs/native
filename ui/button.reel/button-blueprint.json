@@ -1,6 +1,6 @@
 {
     "blueprint_button_autofocus":{
-        "prototype":"core/meta/property-blueprint",
+        "prototype":"montage/core/meta/property-blueprint",
         "properties":{
             "name":"autofocus",
             "blueprint":{
@@ -18,7 +18,7 @@
     },
 
     "blueprint_button_enabled":{
-        "prototype":"core/meta/property-blueprint",
+        "prototype":"montage/core/meta/property-blueprint",
         "properties":{
             "name":"enabled",
             "blueprint":{
@@ -36,7 +36,7 @@
     },
 
     "blueprint_button_form":{
-        "prototype":"core/meta/property-blueprint",
+        "prototype":"montage/core/meta/property-blueprint",
         "properties":{
             "name":"form",
             "blueprint":{
@@ -54,7 +54,7 @@
     },
 
     "blueprint_button_formaction":{
-        "prototype":"core/meta/property-blueprint",
+        "prototype":"montage/core/meta/property-blueprint",
         "properties":{
             "name":"formaction",
             "blueprint":{
@@ -72,7 +72,7 @@
     },
 
     "blueprint_button_formenctype":{
-        "prototype":"core/meta/property-blueprint",
+        "prototype":"montage/core/meta/property-blueprint",
         "properties":{
             "name":"formenctype",
             "blueprint":{
@@ -93,7 +93,7 @@
     },
 
     "blueprint_button_formmethod":{
-        "prototype":"core/meta/property-blueprint",
+        "prototype":"montage/core/meta/property-blueprint",
         "properties":{
             "name":"formmethod",
             "blueprint":{
@@ -113,7 +113,7 @@
     },
 
     "blueprint_button_formnovalidate":{
-        "prototype":"core/meta/property-blueprint",
+        "prototype":"montage/core/meta/property-blueprint",
         "properties":{
             "name":"formnovalidate",
             "blueprint":{
@@ -131,7 +131,7 @@
     },
 
     "blueprint_button_formtarget":{
-        "prototype":"core/meta/property-blueprint",
+        "prototype":"montage/core/meta/property-blueprint",
         "properties":{
             "name":"formtarget",
             "blueprint":{
@@ -149,7 +149,7 @@
     },
 
     "blueprint_button_name":{
-        "prototype":"core/meta/property-blueprint",
+        "prototype":"montage/core/meta/property-blueprint",
         "properties":{
             "name":"name",
             "blueprint":{
@@ -167,7 +167,7 @@
     },
 
     "blueprint_button_label":{
-        "prototype":"core/meta/property-blueprint",
+        "prototype":"montage/core/meta/property-blueprint",
         "properties":{
             "name":"label",
             "blueprint":{
@@ -185,7 +185,7 @@
     },
 
     "blueprint_button_type":{
-        "prototype":"core/meta/property-blueprint",
+        "prototype":"montage/core/meta/property-blueprint",
         "properties":{
             "name":"type",
             "blueprint":{
@@ -206,7 +206,7 @@
     },
 
     "blueprint_button_value":{
-        "prototype":"core/meta/property-blueprint",
+        "prototype":"montage/core/meta/property-blueprint",
         "properties":{
             "name":"value",
             "blueprint":{
@@ -224,7 +224,7 @@
     },
 
     "blueprint_nativecontrol_reference":{
-        "prototype":"core/meta/blueprint-reference",
+        "prototype":"montage/core/meta/blueprint-reference",
         "properties":{
             "valueReference":{
                 "blueprintName":"NativeControl",
@@ -235,7 +235,7 @@
     },
 
     "root":{
-        "prototype":"core/meta/blueprint",
+        "prototype":"montage/core/meta/blueprint",
         "properties":{
             "name":"button",
             "blueprintModuleId":"ui/native/button.reel/button-blueprint.json",
