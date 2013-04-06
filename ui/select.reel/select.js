@@ -371,10 +371,12 @@ var Select = exports.Select =  Montage.create(NativeControl, /** @lends module:"
     Description TODO
     @function
     */
-    prepareForDraw: {
-        value: function() {
-            this.element.addEventListener("focus", this);
-            this.element.addEventListener('change', this);
+    enterDocument: {
+        value: function(firstTime) {
+            if (firstTime) {
+                this.element.addEventListener("focus", this);
+                this.element.addEventListener('change', this);
+            }
         }
     },
 

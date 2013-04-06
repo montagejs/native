@@ -46,10 +46,11 @@ var CheckInput = exports.CheckInput =  Montage.create(NativeControl, {
         }
     },
 
-    prepareForDraw: {
-        enumerable: false,
-        value: function() {
-            this._element.addEventListener('change', this);
+    enterDocument: {
+        value: function(firstTime) {
+            if (firstTime) {
+                this._element.addEventListener('change', this);
+            }
         }
     },
 

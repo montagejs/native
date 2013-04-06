@@ -360,9 +360,11 @@ var Button = exports.Button = Montage.create(NativeControl, /** @lends module:"m
         }
     },
 
-    prepareForDraw: {
-        value: function() {
-            this._element.addEventListener("keyup", this, false);
+    enterDocument: {
+        value: function(firstTime) {
+            if (firstTime) {
+                this._element.addEventListener("keyup", this, false);
+            }
         }
     },
 
