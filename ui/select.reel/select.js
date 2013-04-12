@@ -221,7 +221,7 @@ var Select = exports.Select =  Montage.create(NativeControl, /** @lends module:"
             return this._values;
         },
         set: function(valuesArray) {
-            var content = this.contentController ? this.contentController.content : null;
+            var content = this.content;
 
             if(valuesArray && content) {
                 this._values = valuesArray;
@@ -363,12 +363,19 @@ var Select = exports.Select =  Montage.create(NativeControl, /** @lends module:"
                 option.value = value;
                 option.textContent = text || value;
 
-                if(this._selectedIndexes && this._selectedIndexes.length > 0) {
+                if (this._selectedIndexes && this._selectedIndexes.length > 0) {
                     if(this._selectedIndexes.indexOf(i) >= 0) {
                         option.setAttribute("selected", "true");
                     }
                 }
                 this.element.appendChild(option);
+            }
+
+            // Make sure we have the model synchronized with the changes in the
+            // DOM.
+            if (this._selectedIndexes.length === 0 &&
+                this.element.selectedIndex >= 0) {
+                this._selectedIndexes[0] = this.element.selectedIndex;
             }
         }
     },
