@@ -12,6 +12,15 @@ var Montage = require("montage").Montage,
    @extends module:montage/ui/check-input.CheckInput
  */
 var InputRadio = exports.InputRadio = Montage.create(CheckInput, {
+    
+    didCreate: {
+        value: function() {
+            CheckInput.didCreate.call(this);
+            InputRadio.addEventListener('checked', this);
+        }
+    },
+
+    
     _fakeCheck: {
         enumerable: false,
         value: function() {
@@ -71,10 +80,10 @@ var InputRadio = exports.InputRadio = Montage.create(CheckInput, {
                     // dispatch an event to all other radiobuttons with the same name
                     var anEvent = document.createEvent("CustomEvent");
                     anEvent.initCustomEvent("checked", true, true, {
-                        name: this.name
+                        name: this.name,
+                        component: this
                     });
                     InputRadio.dispatchEvent(anEvent);
-                    InputRadio.addEventListener('checked', this);
                 }
             }
         }
@@ -85,9 +94,8 @@ var InputRadio = exports.InputRadio = Montage.create(CheckInput, {
         value: function(evt) {
             // if we receive this event, it means that some other radiobutton with the same name
             // has been checked. So, mark this as unchecked.
-            if(this.name === evt.detail.name) {
+            if(this.name === evt.detail.name && this !== evt.detail.component) {
                 this.checked = false;
-                InputRadio.removeEventListener('checked', this);
             }
         }
     },
