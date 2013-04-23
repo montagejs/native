@@ -320,54 +320,48 @@ var Button = exports.Button = Montage.create(NativeControl, /** @lends module:"m
         enumerable: false
     },
 
-    willPrepareForDraw: {
-        value: function() {
-            NativeControl.willPrepareForDraw.call(this);
-
-            //this._element.classList.add("montage-Button");
-            this._element.setAttribute("role", "button");
-
-            this._isInputElement = (this._element.tagName === "INPUT");
-            // Only take the value from the element if it hasn't been set
-            // elsewhere (i.e. in the serialization)
-            if (this._isInputElement) {
-                // NOTE: This might not be the best way to do this
-                // With an input element value and label are one and the same
-                Object.defineProperty(this, "value", {
-                    get: function() {
-                        return this._label;
-                    },
-                    set: function(value) {
-                        this.label = value;
-                    }
-                });
-
-                if (this._label === undefined) {
-                    this._label = this._element.value;
-                }
-            } else {
-                if (!this._element.firstChild) {
-                    this._element.appendChild(document.createTextNode(""));
-                }
-                this._labelNode = this._element.firstChild;
-                this.setLabelInitialValue(this._labelNode.data)
-                if (this._label === undefined) {
-                    this._label = this._labelNode.data;
-                }
-            }
-
-            this.needsDraw = true;
-        }
-    },
-
     enterDocument: {
-        value: function(firstTime) {
-            if (firstTime) {
-                this._element.addEventListener("keyup", this, false);
+        value: function(firstDraw) {
+            if (NativeControl.enterDocument) {
+                NativeControl.enterDocument.apply(this, arguments);
+            }
+            
+            if(firstDraw) {
+                this._isInputElement = (this.originalElement.tagName === "INPUT");
+                // Only take the value from the element if it hasn't been set
+                // elsewhere (i.e. in the serialization)
+                if (this._isInputElement) {
+                    // NOTE: This might not be the best way to do this
+                    // With an input element value and label are one and the same
+                    Object.defineProperty(this, "value", {
+                        get: function() {
+                            return this._label;
+                        },
+                        set: function(value) {
+                            this.label = value;
+                        }
+                    });
+
+                    if (this._label === undefined) {
+                        this._label = this.originalElement.value;
+                    }
+                } else {
+                    if (!this.originalElement.firstChild) {
+                        this.originalElement.appendChild(document.createTextNode(""));
+                    }
+                    this._labelNode = this.originalElement.firstChild;
+                    this.setLabelInitialValue(this._labelNode.data)
+                    if (this._label === undefined) {
+                        this._label = this._labelNode.data;
+                    }
+                }
+
+                //this.classList.add("montage-Button");
+                this.element.setAttribute("role", "button");
+                this.element.addEventListener("keyup", this, false);
             }
         }
     },
-
 
     /**
     Draws the label to the DOM.

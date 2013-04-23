@@ -32,11 +32,12 @@ var Textarea = exports.Textarea = Montage.create(TextInput, /** @lends module:"m
         }
     },
 
-    willPrepareForDraw: {
-        value: function() {
-            TextInput.willPrepareForDraw.call(this);
-            if(this.textContent === null) {
-                this.textContent = this.element.textContent;
+    enterDocument: {
+        value: function(firstTime) {
+            if (firstTime) {
+                if (this.textContent === null) {
+                    this.textContent = this.originalElement.textContent;
+                }
             }
         }
     }
