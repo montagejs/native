@@ -228,7 +228,7 @@
         "properties":{
             "valueReference":{
                 "blueprintName":"NativeControl",
-                "blueprintModuleId":"ui/native-control-blueprint.json",
+                "blueprintModuleId":"ui/native-control.meta",
                 "prototypeName":"NativeControl"
             }
         }
@@ -238,7 +238,7 @@
         "prototype":"montage/core/meta/blueprint",
         "properties":{
             "name":"button",
-            "blueprintModuleId":"ui/native/button.reel/button-blueprint.json",
+            "blueprintModuleId":"ui/native/button.reel/button.meta",
             "prototypeName":"button",
             "customPrototype":false,
             "parent":{
