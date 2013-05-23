@@ -13,7 +13,7 @@ var Montage = require("montage").Montage,
     @extends module:montage/ui/check-input.CheckInput
 */
 var InputCheckbox = exports.InputCheckbox = Montage.create(CheckInput, {});
-InputCheckbox.addAttributes( /** @lends module:"montage/ui/native/input-checkbox.reel".InputCheckbox# */ {
+InputCheckbox.prototype.addAttributes( /** @lends module:"montage/ui/native/input-checkbox.reel".InputCheckbox# */ {
 
 /**
     Specifies if the checkbox control should receive focus when the document loads. Because Montage components are loaded asynchronously after the document has loaded, setting this property has no effect on the element's focus state.

@@ -44,7 +44,7 @@ var Textarea = exports.Textarea = Montage.create(TextInput, /** @lends module:"m
 
 });
 
-Textarea.addAttributes( /** @lends module:"montage/ui/native/textarea.reel".Textarea# */ {
+Textarea.prototype.addAttributes( /** @lends module:"montage/ui/native/textarea.reel".Textarea# */ {
 /**
     Specifies whether the element should be focused as soon as the page is loaded.
     @type {boolean}

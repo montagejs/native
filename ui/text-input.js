@@ -278,7 +278,7 @@ var TextInput = exports.TextInput =  Montage.create(NativeControl, /** @lends mo
 
 // Standard <input> tag attributes - http://www.w3.org/TR/html5/the-input-element.html#the-input-element
 
-TextInput.addAttributes({
+TextInput.prototype.addAttributes({
     accept: null,
     alt: null,
     autocomplete: null,

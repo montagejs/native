@@ -502,7 +502,7 @@ var Select = exports.Select =  Montage.create(NativeControl, /** @lends module:"
 
 //http://www.w3.org/TR/html5/the-button-element.html#the-select-element
 
-Select.addAttributes( /** @lends module:"montage/ui/native/select.reel".Select */ {
+Select.prototype.addAttributes( /** @lends module:"montage/ui/native/select.reel".Select */ {
 /**
     Specifies whether the element should be focused as soon as the page is loaded.
     @type {boolean}

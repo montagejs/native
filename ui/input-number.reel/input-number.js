@@ -17,7 +17,7 @@ var InputNumber = exports.InputNumber = Montage.create(TextInput, {
 
 });
 
-InputNumber.addAttributes(/** @lends module:"montage/ui/native/input-number.reel".InputNumber */{
+InputNumber.prototype.addAttributes(/** @lends module:"montage/ui/native/input-number.reel".InputNumber */{
 
 /**
 	The maximum value displayed but the number control.

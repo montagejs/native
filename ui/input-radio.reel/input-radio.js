@@ -111,7 +111,7 @@ var InputRadio = exports.InputRadio = Montage.create(CheckInput, {
         }
     }
 });
-InputRadio.addAttributes(/** @lends module:"montage/ui/native/input-radio.reel".InputRadio */ {
+InputRadio.prototype.addAttributes(/** @lends module:"montage/ui/native/input-radio.reel".InputRadio */ {
 
 /**
     Specifies whether the radio button should be focused as soon as the page is loaded.

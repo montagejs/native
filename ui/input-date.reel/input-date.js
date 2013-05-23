@@ -16,7 +16,7 @@ var Montage = require("montage").Montage,
 var InputDate = exports.InputDate = Montage.create(TextInput, {
 });
 
-InputDate.addAttributes( /** @lends module:"montage/ui/native/input-date.reel".InputDate# */{
+InputDate.prototype.addAttributes( /** @lends module:"montage/ui/native/input-date.reel".InputDate# */{
 
 /**
 	The upper bound for the element’s value represented in the "full-date" format, (for example, 2001-05-24).

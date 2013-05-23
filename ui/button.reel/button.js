@@ -431,7 +431,7 @@ var Button = exports.Button = Montage.create(NativeControl, /** @lends module:"m
     }
 });
 
-Button.addAttributes( /** @lends module:"montage/ui/native/button.reel".Button# */{
+Button.prototype.addAttributes( /** @lends module:"montage/ui/native/button.reel".Button# */{
 
 /**
     Specifies whether the button should be focused as soon as the page is loaded.
