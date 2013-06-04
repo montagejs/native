@@ -353,7 +353,7 @@ var Select = exports.Select =  Montage.create(NativeControl, /** @lends module:"
             var text, value;
             for(i=0; i< len; i++) {
                 option = document.createElement('option');
-                if(String.isString(arr[i])) {
+                if(typeof arr[i] === "string") {
                     text = value = arr[i];
                 } else {
                     text = arr[i][this.textPropertyPath || 'text'];
@@ -436,7 +436,7 @@ var Select = exports.Select =  Montage.create(NativeControl, /** @lends module:"
             var arr = this.content||[], len = arr.length, i;
             var text, value;
             for(i=0; i< len; i++) {
-                if(String.isString(arr[i])) {
+                if(typeof arr[i] === "string") {
                     value = arr[i];
                 } else {
                     value = arr[i][this.valuePropertyPath  || 'value'];
