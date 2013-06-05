@@ -21,7 +21,7 @@ var Anchor = exports.Anchor = Montage.create(NativeControl, {
 
 });
 
-Anchor.prototype.addAttributes( /** @lends module:"native/ui/anchor.reel".Anchor# */ {
+Anchor.addAttributes( /** @lends module:"native/ui/anchor.reel".Anchor# */ {
 
 /**
     The text displayed by the link.

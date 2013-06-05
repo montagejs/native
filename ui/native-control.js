@@ -25,7 +25,7 @@ var NativeControl = exports.NativeControl = Montage.create(Component, /** @lends
 });
 
 //http://www.w3.org/TR/html5/elements.html#global-attributes
-NativeControl.prototype.addAttributes( /** @lends module:montage/ui/native-control.NativeControl# */ {
+NativeControl.addAttributes( /** @lends module:montage/ui/native-control.NativeControl# */ {
 
 /**
     Specifies the shortcut key(s) that gives focuses to or activates the element.

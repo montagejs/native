@@ -16,7 +16,7 @@ var Image = exports.Image = Montage.create(NativeControl, {
 
 });
 
-Image.prototype.addAttributes(/** @lends module:"montage/ui/native/image.reel".Image */{
+Image.addAttributes(/** @lends module:"montage/ui/native/image.reel".Image */{
 
 /**
     A text description to display in place of the image.

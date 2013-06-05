@@ -18,7 +18,7 @@ var Progress = exports.Progress =  Montage.create(NativeControl, {
 
 });
 
-Progress.prototype.addAttributes( /** @lends module:"montage/ui/native/progress.reel".Progress# */{
+Progress.addAttributes( /** @lends module:"montage/ui/native/progress.reel".Progress# */{
 
 /**
     The value of the id attribute of the form with which to associate the component's element.
