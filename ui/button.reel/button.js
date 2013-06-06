@@ -213,9 +213,9 @@ var Button = exports.Button = Montage.create(NativeControl, /** @lends module:"m
     focus: { value: function() { this._element.focus(); } },
     // click() deliberately omitted (it isn't available on <button> anyways)
 
-    didCreate: {
-        value: function() {
-            NativeControl.didCreate.call(this); // super
+    constructor: {
+        value: function NativeButton () {
+            this.super();
             this._pressComposer = PressComposer.create();
             this._pressComposer.longPressThreshold = this.holdThreshold;
             this.addComposer(this._pressComposer);
