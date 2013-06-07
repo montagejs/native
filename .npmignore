@@ -1,6 +1,7 @@
+.DS_Store
 .idea
 node_modules
-.DS_Store
+overview
+run-tests.html
 test
-run-test.html
 testacular.conf.js
