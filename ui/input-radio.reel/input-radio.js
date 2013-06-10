@@ -10,7 +10,7 @@ var CheckInput = require("ui/check-input").CheckInput;
 var InputRadio = exports.InputRadio = CheckInput.specialize({
     
     constructor: {
-        value: function() {
+        value: function InputRadio() {
             this.super();
             InputRadio.addEventListener('checked', this);
         }
