@@ -4,6 +4,10 @@
     "publishConfig": {
       "tag": "edge"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/montagejs/native.git"
+    },
     "dependencies": {
         "montage": "0.13.0-alpha"
     },
