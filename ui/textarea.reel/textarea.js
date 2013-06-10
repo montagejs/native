@@ -1,12 +1,8 @@
 /**
     @module "montage/ui/native/textarea.reel"
-    @requires montage/ui/component
-    @requires montage/ui/text-input
 */
 
-var Montage = require("montage").Montage,
-Component = require("montage/ui/component").Component,
-TextInput = require("ui/text-input").TextInput;
+var TextInput = require("ui/text-input").TextInput;
 
 /**
  * Wraps the a &lt;textarea> element with binding support for the element's standard attributes. Uses an ArrayController instance to manage the element's contents and selection.
@@ -14,9 +10,13 @@ TextInput = require("ui/text-input").TextInput;
    @extends module:montage/ui/text-input.TextInput
  */
 
-var Textarea = exports.Textarea = Montage.create(TextInput, /** @lends module:"montage/ui/native/textarea.reel".Textarea# */ {
+var Textarea = exports.Textarea = TextInput.specialize(/** @lends module:"montage/ui/native/textarea.reel".Textarea# */ {
 
-    select: { value: function() { this._element.select(); } },
+    select: {
+        value: function() {
+            this._element.select();
+        }
+    },
 
     /**
         The text display by the Textarea component's element.

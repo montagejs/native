@@ -1,18 +1,15 @@
 /**
     @module montage/ui/native-control
-    @requires montage/core/core
-    @requires montage/ui/component
 */
 
-var Montage = require("montage").Montage,
-    Component = require("montage/ui/component").Component;
+var Component = require("montage/ui/component").Component;
 
 /**
     Base component for all native components, such as RadioButton and Checkbox.
     @class module:montage/ui/native-control.NativeControl
     @extends module:montage/ui/component.Component
  */
-var NativeControl = exports.NativeControl = Montage.create(Component, /** @lends module:montage/ui/native-control.NativeControl# */ {
+var NativeControl = exports.NativeControl = Component.specialize(/** @lends module:montage/ui/native-control.NativeControl# */ {
 
     hasTemplate: {
         value: false

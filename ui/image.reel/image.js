@@ -3,16 +3,14 @@
     @requires montage/ui/component
     @requires montage/ui/native-control
 */
-var Montage = require("montage").Montage,
-    Component = require("montage/ui/component").Component,
-    NativeControl = require("ui/native-control").NativeControl;
+var NativeControl = require("ui/native-control").NativeControl;
 
 /**
  * Wraps the a &lt;img> element with binding support for its standard attributes.
    @class module:"montage/ui/native/image.reel".Image
    @extends module:montage/ui/native-control.NativeControl
  */
-var Image = exports.Image = Montage.create(NativeControl, {
+var Image = exports.Image = NativeControl.specialize({
 
 });
 

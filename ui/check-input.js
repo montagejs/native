@@ -2,13 +2,8 @@
 
 /**
     @module montage/ui/check-input
-    @requires montage/ui/component
-    @requires montage/ui/native-control
-    @requires montage/composer/press-composer
 */
-var Montage = require("montage").Montage,
-    Component = require("montage/ui/component").Component,
-    NativeControl = require("ui/native-control").NativeControl,
+var NativeControl = require("ui/native-control").NativeControl,
     PressComposer = require("montage/composer/press-composer").PressComposer;
 
 /**
@@ -16,7 +11,7 @@ var Montage = require("montage").Montage,
     @class module:montage/ui/check-input.CheckInput
     @extends module:montage/ui/native-control.NativeControl
 */
-var CheckInput = exports.CheckInput =  Montage.create(NativeControl, {
+exports.CheckInput =  NativeControl.specialize({
 
     // HTMLInputElement methods
 
@@ -27,7 +22,7 @@ var CheckInput = exports.CheckInput =  Montage.create(NativeControl, {
     // Callbacks
     draw: {
         value: function() {
-            // Call super
+            this.super();
             this._element.setAttribute("aria-checked", this._checked);
         }
     },
@@ -39,7 +34,7 @@ var CheckInput = exports.CheckInput =  Montage.create(NativeControl, {
 
     prepareForActivationEvents: {
         value: function() {
-            var pressComposer = this._pressComposer = PressComposer.create();
+            var pressComposer = this._pressComposer = new PressComposer();
             this.addComposer(pressComposer);
             pressComposer.addEventListener("pressStart", this, false);
             pressComposer.addEventListener("press", this, false);

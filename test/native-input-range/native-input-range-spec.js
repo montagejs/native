@@ -1,7 +1,5 @@
 /*global require,exports,describe,it,expect,waits,runs */
-var Montage = require("montage").Montage,
-    TestPageLoader = require("montage-testing/testpageloader").TestPageLoader,
-    ActionEventListener = require("montage/core/event/action-event-listener").ActionEventListener;
+var TestPageLoader = require("montage-testing/testpageloader").TestPageLoader;
 
 var testPage = TestPageLoader.queueTest("native-input-range-test", function(testPage) {
     var test;

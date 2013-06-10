@@ -1,12 +1,7 @@
 /**
     @module montage/ui/text-input
-    @requires montage/ui/component
-    @requires montage/ui/native-control
-    @requires montage/core/core
 */
-var Montage = require("montage").Montage,
-    Component = require("montage/ui/component").Component,
-    NativeControl = require("ui/native-control").NativeControl;
+var NativeControl = require("ui/native-control").NativeControl;
 
 /**
     The base class for all text-based input components. You typically won't create instances of this prototype.
@@ -19,7 +14,7 @@ var Montage = require("montage").Montage,
     @see module:"montage/ui/textarea.reel".TextArea
 
 */
-var TextInput = exports.TextInput =  Montage.create(NativeControl, /** @lends module:montage/ui/text-input.TextInput# */ {
+var TextInput = exports.TextInput =  NativeControl.specialize(/** @lends module:montage/ui/text-input.TextInput# */ {
 
     _hasFocus: {
         enumerable: false,
@@ -191,7 +186,7 @@ var TextInput = exports.TextInput =  Montage.create(NativeControl, /** @lends mo
     draw: {
         enumerable: false,
         value: function() {
-            Object.getPrototypeOf(TextInput).draw.call(this);
+            this.super();
 
             var el = this.element;
 

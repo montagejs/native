@@ -13,7 +13,7 @@ var Montage = require("montage").Montage,
     @class module:"montage/ui/native/input-date.reel".InputDate
     @extends module:montage/ui/text-input.TextInput
  */
-var InputDate = exports.InputDate = Montage.create(TextInput, {
+var InputDate = exports.InputDate = TextInput.specialize({
 });
 
 InputDate.addAttributes( /** @lends module:"montage/ui/native/input-date.reel".InputDate# */{

@@ -1,15 +1,9 @@
 /**
     @module "montage/ui/native/select.reel"
-    @requires montage/ui/component
-    @requires montage/ui/controller/array-controller
-    @requires montage/ui/native-control
-    @requires montage/composer/press-composer
 */
 
-var Montage = require("montage").Montage,
-    Bindings = require("montage/core/bindings").Bindings,
+var Bindings = require("montage/core/bindings").Bindings,
     RangeController = require("montage/core/range-controller").RangeController,
-    Component = require("montage/ui/component").Component,
     NativeControl = require("ui/native-control").NativeControl,
     PressComposer = require("montage/composer/press-composer").PressComposer;
 
@@ -27,7 +21,7 @@ var Montage = require("montage").Montage,
     in the markup are overwritten by the values from the
     <code>contentController</code> when they are available.
  */
-var Select = exports.Select =  Montage.create(NativeControl, /** @lends module:"montage/ui/native/select.reel".Select */ {
+var Select = exports.Select =  NativeControl.specialize(/** @lends module:"montage/ui/native/select.reel".Select */ {
 
     _fromInput: {value: null},
     _synching: {value: null},
@@ -58,11 +52,9 @@ var Select = exports.Select =  Montage.create(NativeControl, /** @lends module:"
         }
     },
 
-    didCreate: {
-        value: function() {
-            if (typeof NativeControl.didCreate === "function") {
-                NativeControl.didCreate.apply(this);
-            }
+    constructor: {
+        value: function Select() {
+            this.super();
 
             this._selectedIndexes = [];
             this._selectedIndexes.addRangeChangeListener(this, "selectedIndexes");
@@ -119,7 +111,7 @@ var Select = exports.Select =  Montage.create(NativeControl, /** @lends module:"
             this._content = value;
 
             if(!this.contentController) {
-                var contentController = RangeController.create();
+                var contentController = new RangeController();
                 contentController.content = value;
                 this.contentController = contentController;
             }
@@ -290,7 +282,7 @@ var Select = exports.Select =  Montage.create(NativeControl, /** @lends module:"
             // add options to contentController
             // look for selected options in the markup and mark these as selected
             if(!this.contentController) {
-                var contentController = RangeController.create();
+                var contentController = new RangeController();
                 var selection = [];
                 var content = [];
 
@@ -396,7 +388,7 @@ var Select = exports.Select =  Montage.create(NativeControl, /** @lends module:"
     prepareForActivationEvents: {
         value: function() {
             // add pressComposer to handle the claimPointer related work
-            var pressComposer = PressComposer.create();
+            var pressComposer = new PressComposer();
             this.addComposer(pressComposer);
         }
     },
@@ -416,9 +408,7 @@ var Select = exports.Select =  Montage.create(NativeControl, /** @lends module:"
             this._removeAll(elem);
             this._refreshOptions();
 
-            var fn = Object.getPrototypeOf(Select).draw;
-            fn.call(this);
-
+            this.super();
         }
     },
 

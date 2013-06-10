@@ -3,16 +3,16 @@
     @requires montage/core/core
     @requires montage/ui/check-input
 */
-var Montage = require("montage").Montage,
-    Component = require("montage/ui/component").Component,
-    CheckInput = require("ui/check-input").CheckInput;
+var CheckInput = require("ui/check-input").CheckInput;
 
 /**
 
     @class module:"montage/ui/native/input-checkbox.reel".InputCheckbox
     @extends module:montage/ui/check-input.CheckInput
 */
-var InputCheckbox = exports.InputCheckbox = Montage.create(CheckInput, {});
+var InputCheckbox = exports.InputCheckbox = CheckInput.specialize({
+
+});
 InputCheckbox.addAttributes( /** @lends module:"montage/ui/native/input-checkbox.reel".InputCheckbox# */ {
 
 /**

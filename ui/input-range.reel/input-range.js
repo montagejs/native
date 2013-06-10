@@ -2,14 +2,9 @@
 
 /**
     @module "montage/ui/native/input-range.reel"
-    @requires montage/ui/component
-    @requires montage/ui/text-input
-    @requires montage/composer/press-composer
 */
 
-var Montage = require("montage").Montage,
-    Component = require("montage/ui/component").Component,
-    TextInput = require("ui/text-input").TextInput,
+var TextInput = require("ui/text-input").TextInput,
     PressComposer = require("montage/composer/press-composer").PressComposer;
 
 /**
@@ -17,10 +12,10 @@ var Montage = require("montage").Montage,
    @class module:"montage/ui/native/input-range.reel".InputRange
    @extends module:montage/ui/text-input.TextInput
  */
-var InputRange = exports.InputRange = Montage.create(TextInput, {
+var InputRange = exports.InputRange = TextInput.specialize({
     prepareForActivationEvents: {
         value: function() {
-            var pressComposer = PressComposer.create();
+            var pressComposer = new PressComposer();
             pressComposer.delegate = this;
             this.addComposer(pressComposer);
             pressComposer.addEventListener("pressStart", this, false);

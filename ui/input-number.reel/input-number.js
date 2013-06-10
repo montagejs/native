@@ -4,16 +4,14 @@
     @requires montage/ui/text-input
 */
 
-var Montage = require("montage").Montage,
-    Component = require("montage/ui/component").Component,
-    TextInput = require("ui/text-input").TextInput;
+var TextInput = require("ui/text-input").TextInput;
 
 /**
  * Wraps the a &lt;input type="date"> element with binding support for the element's standard attributes.
    @class module:"montage/ui/native/input-number.reel".InputNumber
    @extends module:montage/ui/text-input.TextInput
  */
-var InputNumber = exports.InputNumber = Montage.create(TextInput, {
+var InputNumber = exports.InputNumber = TextInput.specialize({
 
 });
 

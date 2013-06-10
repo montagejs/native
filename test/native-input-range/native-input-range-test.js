@@ -1,7 +1,6 @@
-var Montage = require("montage").Montage;
 var TestController = require("montage-testing/test-controller").TestController;
 
-exports.NativeInputRangeTest = Montage.create(TestController, {
+exports.NativeInputRangeTest = TestController.specialize({
 
     nativeInputRange1: {
         value: null

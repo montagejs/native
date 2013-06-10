@@ -1,21 +1,17 @@
 /**
     @module "montage/ui/native/input-radio.reel"
-    @requires montage/ui/component
-    @requires montage/ui/check-input
 */
-var Montage = require("montage").Montage,
-    Component = require("montage/ui/component").Component,
-    CheckInput = require("ui/check-input").CheckInput;
+var CheckInput = require("ui/check-input").CheckInput;
 /**
  * Wraps the a &lt;input type="radio"> element with binding support for the element's standard attributes.
    @class module:"montage/ui/native/input-radio.reel".InputRadio
    @extends module:montage/ui/check-input.CheckInput
  */
-var InputRadio = exports.InputRadio = Montage.create(CheckInput, {
+var InputRadio = exports.InputRadio = CheckInput.specialize({
     
-    didCreate: {
+    constructor: {
         value: function() {
-            CheckInput.didCreate.call(this);
+            this.super();
             InputRadio.addEventListener('checked', this);
         }
     },
@@ -106,8 +102,7 @@ var InputRadio = exports.InputRadio = Montage.create(CheckInput, {
                 this._element.checked = this._checked;
             }
 
-            // Call super
-            Object.getPrototypeOf(InputRadio).draw.call(this);
+            this.super();
         }
     }
 });

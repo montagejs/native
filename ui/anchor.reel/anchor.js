@@ -1,18 +1,14 @@
 /**
     @module "native/ui/anchor.reel"
-    @requires montage/core/core
-    @requires montage/ui/native-control
 */
-var Montage = require("montage").Montage,
-    Component = require("montage/ui/component").Component,
-    NativeControl = require("ui/native-control").NativeControl;
+var NativeControl = require("ui/native-control").NativeControl;
 /**
   The Anchor component wraps a native <code>&lt;a&gt;</code> element and exposes its standard attributes as bindable properties.
   @class module:"native/ui/anchor.reel".Anchor
   @extends module:native/ui/native-control.NativeControl
 
 */
-var Anchor = exports.Anchor = Montage.create(NativeControl, {
+var Anchor = exports.Anchor = NativeControl.specialize({
 
     // HTMLAnchorElement methods
 

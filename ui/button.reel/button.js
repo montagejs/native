@@ -2,14 +2,8 @@
 
 /**
     @module "montage/ui/native/button.reel"
-    @requires montage/core/core
-    @requires montage/ui/component
-    @requires montage/ui/native-control
-    @requires montage/composer/press-composer
 */
-var Montage = require("montage").Montage,
-    Component = require("montage/ui/component").Component,
-    NativeControl = require("ui/native-control").NativeControl,
+var NativeControl = require("ui/native-control").NativeControl,
     PressComposer = require("montage/composer/press-composer").PressComposer,
     Dict = require("montage/collections/dict");
 
@@ -23,7 +17,7 @@ var Montage = require("montage").Montage,
     @fires hold
     @example
 <caption>JavaScript example</caption>
-var b1 = Button.create();
+var b1 = new Button();
 b1.element = document.querySelector("btnElement");
 b1.addEventListener("action", function(event) {
     console.log("Got event 'action' event");
@@ -49,7 +43,7 @@ b1.addEventListener("action", function(event) {
 }
 &lt;button data-montage-id="btnElement"></button>
 */
-var Button = exports.Button = Montage.create(NativeControl, /** @lends module:"montage/ui/native/button.reel".Button# */ {
+var Button = exports.Button = NativeControl.specialize(/** @lends module:"montage/ui/native/button.reel".Button# */ {
 
     /**
         Dispatched when the button is activated through a mouse click, finger tap,
@@ -216,7 +210,7 @@ var Button = exports.Button = Montage.create(NativeControl, /** @lends module:"m
     constructor: {
         value: function NativeButton () {
             this.super();
-            this._pressComposer = PressComposer.create();
+            this._pressComposer = new PressComposer();
             this._pressComposer.longPressThreshold = this.holdThreshold;
             this.addComposer(this._pressComposer);
         }
@@ -233,7 +227,7 @@ var Button = exports.Button = Montage.create(NativeControl, /** @lends module:"m
     // Optimisation
     addEventListener: {
         value: function(type, listener, useCapture) {
-            NativeControl.addEventListener.call(this, type, listener, useCapture);
+            this.super(type, listener, useCapture);
             if (type === "hold") {
                 this._pressComposer.addEventListener("longPress", this, false);
             }
@@ -381,8 +375,7 @@ var Button = exports.Button = Montage.create(NativeControl, /** @lends module:"m
 
     draw: {
         value: function() {
-            // Call super method
-            Object.getPrototypeOf(Button).draw.call(this);
+            this.super();
 
             if (this._disabled) {
                 this._element.classList.add("disabled");

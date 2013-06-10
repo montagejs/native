@@ -1,12 +1,8 @@
 /**
     @module "montage/ui/native/progress.reel"
-    @requires montage/ui/commponent
-    @requires montage/ui/native-control
 */
 
-var Montage = require("montage").Montage,
-    Component = require("montage/ui/component").Component,
-    NativeControl = require("ui/native-control").NativeControl;
+var NativeControl = require("ui/native-control").NativeControl;
 
 /**
   The Progress component wraps a native <code>&lt;progress></code> element and exposes its standard attributes as bindable properties.
@@ -14,7 +10,7 @@ var Montage = require("montage").Montage,
   @extends module:montage/ui/native-control.NativeControl
 
 */
-var Progress = exports.Progress =  Montage.create(NativeControl, {
+var Progress = exports.Progress =  NativeControl.specialize({
 
 });
 
