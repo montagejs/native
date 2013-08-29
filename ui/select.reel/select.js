@@ -483,7 +483,7 @@ var Select = exports.Select =  NativeControl.specialize(/** @lends module:"monta
                 this._setContentControllerSelectedIndexes(arr);
                 this._synchValues();
             }
-
+            this._dispatchActionEvent();
         }
     }
 
