@@ -113,6 +113,7 @@ var Select = exports.Select =  NativeControl.specialize(/** @lends module:"monta
             if(!this.contentController) {
                 var contentController = new RangeController();
                 contentController.content = value;
+                contentController.selection = [];
                 this.contentController = contentController;
             }
 
