@@ -179,7 +179,7 @@ var Select = exports.Select =  NativeControl.specialize(/** @lends module:"monta
                 length = selectedIndexes.length,
                 valuePath;
 
-            if(length > 0) {
+            if(length > 0 && content) {
                 arr = [];
                 valuePath = this.valuePropertyPath || 'value';
 
