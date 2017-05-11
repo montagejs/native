@@ -6,7 +6,7 @@
     "url": "https://github.com/montagejs/native.git"
   },
   "dependencies": {
-    "montage": "~0.14.0"
+    "montage": "~16.0.4"
   },
   "devDependencies": {
     "montage-testing": "~0.4.0"
