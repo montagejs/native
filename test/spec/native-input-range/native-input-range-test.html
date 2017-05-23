@@ -3,11 +3,11 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Native InputRange test</title>
-    <script type="text/javascript" src="../../node_modules/montage/montage.js" data-package="../../"></script>
+    <script type="text/javascript" src="../../../node_modules/montage/montage.js" data-package="../../"></script>
     <script type="text/montage-serialization">
         {
             "test": {
-                "prototype": "test/native-input-range/native-input-range-test",
+                "prototype": "spec/native-input-range/native-input-range-test",
                 "properties": {
                     "nativeInputRange1": {"@": "nativeInputRange1"},
                     "nativeInputRange": {"@": "nativeInputRange"}
@@ -15,14 +15,14 @@
             },
 
             "nativeInputRange1": {
-                "prototype": "ui/input-range.reel",
+                "prototype": "native/ui/input-range.reel",
                 "properties": {
                     "element": {"#": "nativeInputRange1"},
                     "value": "50"
                 }
             },
             "nativeInputRange": {
-                "prototype": "ui/input-range.reel",
+                "prototype": "native/ui/input-range.reel",
                 "properties": {
                     "element": {"#": "nativeInputRange"},
                     "value": 1

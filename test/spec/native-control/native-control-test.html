@@ -3,11 +3,11 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Native Control Tests</title>
-    <script type="text/javascript" src="../../node_modules/montage/montage.js" data-package="../../"></script>
+    <script type="text/javascript" src="../../../node_modules/montage/montage.js" data-package="../../"></script>
      <script type="text/montage-serialization">
         {
             "test": {
-                "prototype": "test/native-control/native-control-test",
+                "prototype": "spec/native-control/native-control-test",
                 "properties": {
                     "txt1": {"@": "txt1"},
                     "txt2": {"@": "txt2"},
@@ -17,21 +17,21 @@
             },
 
             "txt1": {
-                "prototype": "ui/input-text.reel",
+                "prototype": "native/ui/input-text.reel",
                 "properties": {
                     "element": {"#": "txt1"}
                 }
             },
 
             "txt2": {
-                "prototype": "ui/input-text.reel",
+                "prototype": "native/ui/input-text.reel",
                 "properties": {
                     "element": {"#": "txt2"}
                 }
             },
 
             "txt3": {
-                "prototype": "ui/input-text.reel",
+                "prototype": "native/ui/input-text.reel",
                 "properties": {
                     "element": {"#": "txt3"},
                     "accept": "",
@@ -61,7 +61,7 @@
             },
 
             "textarea1": {
-                "prototype": "ui/textarea.reel",
+                "prototype": "native/ui/textarea.reel",
                 "properties": {
                     "element": {"#": "textarea1"}
                 }
