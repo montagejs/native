@@ -8,7 +8,7 @@
     "url": "https://github.com/montagejs/native.git"
   },
   "dependencies": {
-    "montage": ">=16.0.4",
+    "montage": "^17.0.8",
     "montage-testing": "^0.5.1"
   },
   "devDependencies": {
