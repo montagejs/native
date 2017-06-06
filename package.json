@@ -8,10 +8,10 @@
     "url": "https://github.com/montagejs/native.git"
   },
   "dependencies": {
-    "montage": "^17.0.8",
-    "montage-testing": "^0.5.1"
+    "montage": ">=16.0.4"
   },
   "devDependencies": {
+    "montage-testing": "^0.5.1",
     "concurrently": "^3.4.0",
     "http-server": "^0.9.0",
     "jasmine-console-reporter": "^1.2.7",
